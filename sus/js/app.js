@@ -1,62 +1,24 @@
-const NAV = [
-  ["Início","home"],
-  ["Política pública","politica"],
-  ["Colônia e Santas Casas","colonia"],
-  ["Campanhas e Oswaldo Cruz","campanhas"],
-  ["Previdência e INAMPS","previdencia"],
-  ["Alma-Ata e AIS","alma"],
-  ["Reforma e 8ª CNS","reforma"],
-  ["Constituição e leis","constituicao"],
-  ["Princípios do SUS","principios"],
-  ["Controle social","controle"],
-  ["Rede de atenção","rede"],
-  ["Pacto e futuro","futuro"],
-  ["Saúde bucal","bucal"],
-  ["Linha do tempo","linha"],
-  ["Galeria","galeria"],
-  ["Quiz","quiz"],
-  ["Glossário","glossario"]
-];
-const MODS = [
-  ["politica","hero","Conceito","O Estado responde a um problema público."],
-  ["colonia","santacasa","Origem","Da caridade colonial ao vazio de política."],
-  ["campanhas","oswaldo","Campanhas","Vacina, porto e polícia sanitária."],
-  ["previdencia","hospital","Carteira","CAP, IAP, INPS, INAMPS."],
-  ["alma","prenatal","Alma-Ata","Cuidado primário como direito mundial."],
-  ["reforma","cns","8ª CNS","4 mil vozes, três temas, um projeto."],
-  ["constituicao","congresso","1988","O art. 196 muda o sujeito da saúde."],
-  ["principios","equity","8.080","Universalidade, equidade, integralidade."],
-  ["controle","vacina","8.142","Conselho, conferência, paridade."],
-  ["rede","samu","Cuidado","UBS, ESF, especialidade, 192."],
-  ["futuro","acs","2030","Clima, DCNT, IA no território."],
-  ["bucal","dental","Sorriso","CEOs, prótese, Bangkok."]
-];
-const TIMES = [["1543","Santa Casa de Santos"],["1808","Cursos médicos no Rio e Salvador"],["1829","Sociedade de Medicina e Cirurgia do Rio"],["1888-1904","Oswaldo Cruz e Revolta da Vacina"],["1923","Lei Eloy Chaves — CAPs"],["1932","IAPs"],["1966-77","INPS e INAMPS"],["1978","Alma-Ata"],["1986","8ª Conferência Nacional de Saúde"],["1988","Constituição, art. 196"],["1990","Leis 8.080 e 8.142"],["2006","Pacto pela Saúde"],["2011","Decreto 7.508"],["2023","17ª CNS e Lei 14.572"],["2027","18ª CNS"]];
-const GLOS = [["Política pública","Diretrizes e referenciais ético-legais do Estado diante de um problema social."],["Universalidade","Direito de todas as pessoas."],["Equidade","Tratar desigualmente os desiguais."],["Integralidade","Promoção, proteção e recuperação articuladas."],["Descentralização","Responsabilidades repartidas entre entes."],["Municipalização","Município como gestor principal."],["Controle social","Conselhos e conferências com usuários em paridade."],["INAMPS","Braço assistencial previdenciário, hospitalar e excludente."],["Reforma Sanitária","Democratização da saúde e das condições de vida."],["APS","Porta de entrada e coordenadora da rede."]];
-const QUIZ = [
-  {q:"A Reforma Sanitária teve como marco institucional:", opts:["6ª CNS de 1977","7ª CNS de 1980","8ª CNS de 1986","9ª CNS de 1992","10ª CNS de 1996"], a:2, exp:"A 8ª CNS de 1986 sistematizou o projeto levado à Constituinte."},
-  {q:"O direito à saúde estendeu-se a todas as pessoas com a criação do SUS.", opts:["Certo","Errado"], a:0, exp:"Virada de 1988: do vínculo contributivo ao direito de cidadania."},
-  {q:"Houve movimento de médicos residentes na Reforma.", opts:["Certo","Errado"], a:0, exp:"A apostila registra esse questionamento."},
-  {q:"Antes de 1988 o sistema já se pautava por conceito ampliado de saúde.", opts:["Certo","Errado"], a:1, exp:"O conceito ampliado vira diretriz com a 8ª CNS e a Constituição."},
-  {q:"Atendimento privilegiado a amiga de deputado fere qual princípio?", opts:["integralidade","igualdade","universalidade","imparcialidade","descentralização"], a:1, exp:"FGV/TJ-SC 2018: igualdade."}
-];
-const GALS = [["equipe","Equipe de Saúde da Família"],["acs","ACS na comunidade ribeirinha"],["cns","Conferência sanitária"],["congresso","Congresso Nacional"],["fiocruz","Fiocruz"],["oswaldo","Oswaldo Cruz"],["santacasa","Santa Casa"],["samu","SAMU 192"],["vacina","Vacinação"],["dental","Saúde bucal"],["equity","Equidade"],["amazonia","Amazônia"],["prenatal","Cuidado materno"],["hospital","Hospital"],["protesto","Mobilização"],["hero","Identidade"]];
+document.getElementById("main").innerHTML=Object.values(PAGES).join("")+'<div class="foot">Fonte: apostila Políticas Públicas de Saúde no Brasil, Profª Adriana Beatriz Silveira Pinto, 2026.</div>';
+const MODS=[["politica","hero","Conceito","O Estado responde a um problema público."],["colonia","santacasa","Origem","Da caridade colonial ao vazio de política."],["campanhas","oswaldo","Campanhas","Vacina, porto e polícia sanitária."],["previdencia","hospital","Carteira","CAP, IAP, INPS, INAMPS."],["alma","prenatal","Alma-Ata","Cuidado primário como direito mundial."],["reforma","cns","8ª CNS","4 mil vozes, três temas, um projeto."],["constituicao","congresso","1988","O art. 196 muda o sujeito da saúde."],["principios","equity","8.080","Universalidade, equidade, integralidade."],["controle","vacina","8.142","Conselho, conferência, paridade."],["rede","samu","Cuidado","UBS, ESF, especialidade, 192."],["futuro","acs","2030","Clima, DCNT, IA no território."],["bucal","dental","Sorriso","CEOs, prótese, Bangkok."]];
+const TIMES=[["1543","Santa Casa de Santos"],["1808","Cursos médicos no Rio e Salvador"],["1829","Sociedade de Medicina e Cirurgia do Rio"],["1888-1904","Oswaldo Cruz e Revolta da Vacina"],["1923","Lei Eloy Chaves — CAPs"],["1932","IAPs"],["1966-77","INPS e INAMPS"],["1978","Alma-Ata"],["1986","8ª Conferência Nacional de Saúde"],["1988","Constituição, art. 196"],["1990","Leis 8.080 e 8.142"],["2006","Pacto pela Saúde"],["2011","Decreto 7.508"],["2023","17ª CNS e Lei 14.572"],["2027","18ª CNS"]];
+const GLOS=[["Política pública","Diretrizes e referenciais ético-legais do Estado diante de um problema social."],["Universalidade","Direito de todas as pessoas."],["Equidade","Tratar desigualmente os desiguais."],["Integralidade","Promoção, proteção e recuperação articuladas."],["Descentralização","Responsabilidades repartidas entre entes."],["Municipalização","Município como gestor principal."],["Controle social","Conselhos e conferências com usuários em paridade."],["INAMPS","Braço assistencial previdenciário, hospitalar e excludente."],["Reforma Sanitária","Democratização da saúde e das condições de vida."],["APS","Porta de entrada e coordenadora da rede."]];
+const QUIZ=[{q:"A Reforma Sanitária teve como marco institucional:",opts:["6ª CNS de 1977","7ª CNS de 1980","8ª CNS de 1986","9ª CNS de 1992","10ª CNS de 1996"],a:2,exp:"A 8ª CNS de 1986 sistematizou o projeto levado à Constituinte."},{q:"O direito à saúde estendeu-se a todas as pessoas com a criação do SUS.",opts:["Certo","Errado"],a:0,exp:"Virada de 1988: do vínculo contributivo ao direito de cidadania."},{q:"Houve movimento de médicos residentes na Reforma.",opts:["Certo","Errado"],a:0,exp:"A apostila registra esse questionamento."},{q:"Antes de 1988 o sistema já se pautava por conceito ampliado de saúde.",opts:["Certo","Errado"],a:1,exp:"O conceito ampliado vira diretriz com a 8ª CNS e a Constituição."},{q:"Atendimento privilegiado a amiga de deputado fere qual princípio?",opts:["integralidade","igualdade","universalidade","imparcialidade","descentralização"],a:1,exp:"FGV/TJ-SC 2018: igualdade."}];
+const GALS=[["equipe","Equipe de Saúde da Família"],["acs","ACS no território"],["cns","Conferência"],["congresso","Congresso"],["fiocruz","Fiocruz"],["oswaldo","Oswaldo Cruz"],["santacasa","Santa Casa"],["samu","SAMU"],["vacina","Vacinação"],["dental","Saúde bucal"],["equity","Equidade"],["amazonia","Amazônia"],["prenatal","Cuidado materno"],["hospital","Hospital"],["protesto","Mobilização"],["hero","Capa"]];
 const nav=document.getElementById("nav");
 NAV.forEach(([label,id],i)=>{if(i===1)nav.insertAdjacentHTML("beforeend",'<div class="sec">Percurso</div>');if(id==="linha")nav.insertAdjacentHTML("beforeend",'<div class="sec">Estúdio</div>');const b=document.createElement("button");b.textContent=label;b.dataset.go=id;nav.appendChild(b);});
-const grid=document.getElementById("modgrid");
-MODS.forEach(([id,ph,t,s])=>{const el=document.createElement("article");el.className="card";el.dataset.go=id;el.innerHTML=`<div class="ph ph-${ph}"></div><div class="bd"><h3>${t}</h3><p class="muted">${s}</p></div>`;grid.appendChild(el);});
-document.getElementById("timeline").innerHTML=TIMES.map(([y,t])=>`<div class="titem"><b>${y}</b><div>${t}</div></div>`).join("");
-document.getElementById("glo").innerHTML=GLOS.map(([k,v])=>`<div class="box" style="margin:0 0 10px"><b>${k}</b><p>${v}</p></div>`).join("");
-document.getElementById("gal").innerHTML=GALS.map(([ph,c])=>`<div><div class="photo ph-${ph}" data-cap="${c}"></div><p class="cap">${c}</p></div>`).join("");
+document.getElementById("modgrid").innerHTML=MODS.map(([id,ph,t,s])=>'<article class="card" data-go="'+id+'"><div class="ph ph-'+ph+'"></div><div class="bd"><h3>'+t+'</h3><p class="muted">'+s+'</p></div></article>').join("");
+document.getElementById("timeline").innerHTML=TIMES.map(([y,t])=>'<div class="titem"><b>'+y+'</b><div>'+t+'</div></div>').join("");
+document.getElementById("glo").innerHTML=GLOS.map(([k,v])=>'<div class="box" style="margin:0 0 10px"><b>'+k+'</b><p>'+v+'</p></div>').join("");
+document.getElementById("gal").innerHTML=GALS.map(([ph,c])=>'<div><div class="photo ph-'+ph+'" data-cap="'+c+'"></div><p class="cap">'+c+'</p></div>').join("");
 const quizBox=document.getElementById("quiz");
-QUIZ.forEach((item,i)=>{const d=document.createElement("div");d.className="q";d.innerHTML=`<p><b>${i+1}.</b> ${item.q}</p>`+item.opts.map((o,j)=>`<button class="opt" data-i="${i}" data-j="${j}">${o}</button>`).join("")+`<p class="muted exp" hidden>${item.exp}</p>`;quizBox.appendChild(d);});
-quizBox.addEventListener("click",e=>{const b=e.target.closest(".opt");if(!b)return;const item=QUIZ[+b.dataset.i];const wrap=b.parentElement;wrap.querySelectorAll(".opt").forEach(x=>x.disabled=true);wrap.querySelectorAll(".opt").forEach(x=>{if(+x.dataset.j===item.a)x.classList.add("ok");});if(+b.dataset.j===item.a)b.classList.add("ok");else b.classList.add("bad");wrap.querySelector(".exp").hidden=false;});
+QUIZ.forEach((item,i)=>{const d=document.createElement("div");d.className="q";d.innerHTML='<p><b>'+(i+1)+'.</b> '+item.q+'</p>'+item.opts.map((o,j)=>'<button class="opt" data-i="'+i+'" data-j="'+j+'">'+o+'</button>').join('')+'<p class="muted exp" hidden>'+item.exp+'</p>';quizBox.appendChild(d);});
+quizBox.addEventListener("click",e=>{const b=e.target.closest(".opt");if(!b)return;const item=QUIZ[+b.dataset.i];const wrap=b.parentElement;wrap.querySelectorAll(".opt").forEach(x=>x.disabled=true);wrap.querySelectorAll(".opt").forEach(x=>{if(+x.dataset.j===item.a)x.classList.add("ok")});if(+b.dataset.j===item.a)b.classList.add("ok");else b.classList.add("bad");wrap.querySelector(".exp").hidden=false;});
 function go(id){document.querySelectorAll(".panel").forEach(p=>p.classList.toggle("on",p.dataset.panel===id));document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.go===id));window.scrollTo({top:0,behavior:"smooth"});history.replaceState(null,"","#"+id);}
 document.body.addEventListener("click",e=>{const t=e.target.closest("[data-go]");if(t)go(t.dataset.go);});
-document.getElementById("btnPresent").onclick=()=>document.body.classList.toggle("present");
-document.getElementById("btnTop").onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
-document.getElementById("q").addEventListener("input",e=>{const s=e.target.value.trim().toLowerCase();if(!s)return;const hit=NAV.find(([l])=>l.toLowerCase().includes(s));if(hit)go(hit[1]);});
+document.getElementById("btnPresent").onclick=function(){document.body.classList.toggle("present")};
+document.getElementById("btnTop").onclick=function(){window.scrollTo({top:0,behavior:"smooth"})};
+document.getElementById("q").addEventListener("input",e=>{const s=e.target.value.trim().toLowerCase();if(!s)return;const hit=NAV.find(function(x){return x[0].toLowerCase().indexOf(s)>=0});if(hit)go(hit[1]);});
 const lb=document.getElementById("lb");
-document.body.addEventListener("click",e=>{const ph=e.target.closest(".photo");if(!ph){if(e.target===lb)lb.classList.remove("on");return;}lb.innerHTML=`<div class="${ph.className}" style="width:min(1100px,92vw);height:min(78vh,640px);border-radius:16px"></div><p class="cap">${ph.dataset.cap||""}</p>`;lb.classList.add("on");});
-document.addEventListener("keydown",e=>{if(e.key==="Escape"){lb.classList.remove("on");document.body.classList.remove("present")}if(e.key==="ArrowRight"||e.key==="ArrowLeft"){const ids=NAV.map(x=>x[1]);const cur=document.querySelector(".panel.on").dataset.panel;let i=ids.indexOf(cur);i+=e.key==="ArrowRight"?1:-1;if(ids[i])go(ids[i]);}});
+document.body.addEventListener("click",e=>{const ph=e.target.closest(".photo");if(!ph){if(e.target===lb)lb.classList.remove("on");return;}lb.innerHTML='<div class="'+ph.className+'" style="width:min(1100px,92vw);height:min(78vh,640px);border-radius:16px"></div><p class="cap">'+(ph.dataset.cap||"")+'</p>';lb.classList.add("on");});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){lb.classList.remove("on");document.body.classList.remove("present")}if(e.key==="ArrowRight"||e.key==="ArrowLeft"){const ids=NAV.map(function(x){return x[1]});const cur=document.querySelector(".panel.on").dataset.panel;let i=ids.indexOf(cur);i+=e.key==="ArrowRight"?1:-1;if(ids[i])go(ids[i]);}});
 go((location.hash||"#home").slice(1));
